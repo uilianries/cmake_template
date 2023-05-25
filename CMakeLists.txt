@@ -30,7 +30,7 @@ myproject_setup_options()
 
 myproject_global_options()
 include(Dependencies.cmake)
-myproject_setup_dependencies()
+# myproject_dependencies()
 
 myproject_local_options()
 

@@ -16,8 +16,9 @@ if(PROJECT_IS_TOP_LEVEL OR TEST_INSTALLED_VERSION)
 endif()
 
 # ---- Dependencies ----
-
-include(${Catch2_SOURCE_DIR}/extras/Catch.cmake)
+message(WARNING "VCPKG_INSTALL_DIR: ${VCPKG_INSTALL_DIR}")
+#include(${Catch2_SOURCE_DIR}/Catch.cmake)
+include("${CMAKE_BINARY_DIR}/vcpkg_installed/${VCPKG_TARGET_TRIPLET}/share/Catch2/Catch.cmake")
 
 # Provide a simple smoke test to make sure that the CLI works and can display a --help message
 add_test(NAME cli.has_help COMMAND intro --help)
