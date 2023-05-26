@@ -1,0 +1,15 @@
+[requires]
+fmt/9.1.0
+spdlog/1.11.0
+catch2/3.3.2
+cli11/2.3.2
+ftxui/4.1.0
+
+[tool_requires]
+lefticus-tools/update_build_system
+
+[layout]
+cmake_layout
+
+[generators]
+CMakeDeps
