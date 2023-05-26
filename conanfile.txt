@@ -7,6 +7,7 @@ ftxui/4.1.0
 
 [tool_requires]
 lefticus-tools/update_build_system
+ninja/1.11.1
 
 [layout]
 cmake_layout
