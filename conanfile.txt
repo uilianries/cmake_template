@@ -1,13 +1,16 @@
 [requires]
-fmt/9.1.0
 spdlog/1.11.0
-catch2/3.3.2
+fmt/9.1.0
 cli11/2.3.2
 ftxui/4.1.0
 
 [tool_requires]
-lefticus-tools/update_build_system
 ninja/1.11.1
+
+[test_requires]
+lefticus-tools/update_build_system
+doxygen/1.9.4
+catch2/3.3.2
 
 [layout]
 cmake_layout

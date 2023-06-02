@@ -178,7 +178,6 @@
             "description": "Target Unix-like OS with the clang compiler, release build type",
             "inherits": "conf-unixlike-common",
             "cacheVariables": {
-                "CMAKE_PROJECT_TOP_LEVEL_INCLUDES": { "type": "PATH", "value": "${sourceDir}/cmake/conan_provider.cmake"},
                 "CMAKE_C_COMPILER": "clang",
                 "CMAKE_CXX_COMPILER": "clang++",
                 "CMAKE_BUILD_TYPE": "RelWithDebInfo"

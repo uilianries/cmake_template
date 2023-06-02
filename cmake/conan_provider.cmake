@@ -1,6 +1,7 @@
 # https://raw.githubusercontent.com/conan-io/cmake-conan/1e093fec7b70e2ed7cf5e295984d894e3ce1dd2f/conan_provider.cmake
 set(CONAN_MINIMUM_VERSION 2.0.5)
 
+message(STATUS "Calling conan_provider.cmake")
 
 function(detect_os OS)
     # it could be cross compilation
