@@ -1,0 +1,13 @@
+name: Build using Conan
+
+on: workflow_call
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    container: conanio/gcc11-ubuntu16.04:latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: cmake -B build -S . --preset=unixlike-gcc-release
+      - run: cmake --build build/
+      - run: build/test/tests
