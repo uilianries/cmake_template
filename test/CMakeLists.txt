@@ -18,6 +18,7 @@ endif()
 # ---- Dependencies ----
 #include("$ENV{HOME}/.conan2/p//catch44cd51ee3484c/p/lib/cmake/Catch2/Catch.cmake")
 find_package(Catch2 CONFIG REQUIRED)
+include(Catch)
 
 # Provide a simple smoke test to make sure that the CLI works and can display a --help message
 add_test(NAME cli.has_help COMMAND intro --help)
