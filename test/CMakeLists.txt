@@ -16,8 +16,9 @@ if(PROJECT_IS_TOP_LEVEL OR TEST_INSTALLED_VERSION)
 endif()
 
 # ---- Dependencies ----
-
-include(${Catch2_SOURCE_DIR}/extras/Catch.cmake)
+#include("$ENV{HOME}/.conan2/p//catch44cd51ee3484c/p/lib/cmake/Catch2/Catch.cmake")
+find_package(Catch2 CONFIG REQUIRED)
+include(Catch)
 
 # Provide a simple smoke test to make sure that the CLI works and can display a --help message
 add_test(NAME cli.has_help COMMAND intro --help)

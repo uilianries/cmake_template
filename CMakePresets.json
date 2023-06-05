@@ -12,7 +12,10 @@
             "hidden": true,
             "generator": "Ninja",
             "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "installDir": "${sourceDir}/out/install/${presetName}"
+            "installDir": "${sourceDir}/out/install/${presetName}",
+            "cacheVariables": {
+                "CMAKE_PROJECT_TOP_LEVEL_INCLUDES": { "type": "PATH", "value": "${sourceDir}/cmake/conan_provider.cmake"}
+            }
         },
         {
             "name": "conf-windows-common",
