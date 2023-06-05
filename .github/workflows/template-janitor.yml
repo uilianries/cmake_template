@@ -131,7 +131,7 @@ jobs:
 
       - name: Test simple configuration to make sure nothing broke
         run: |
-          cmake -S . -B ./build -G "${{ matrix.generator }}" -DCMAKE_BUILD_TYPE:STRING=${{ matrix.build_type }} -D${{ env.NEW_SAFE_PROJECT }}_PACKAGING_MAINTAINER_MODE:BOOL=ON
+          cmake -S . -B ./build -G "${{ matrix.generator }}" -DCMAKE_BUILD_TYPE:STRING=${{ matrix.build_type }} -D${{ env.NEW_SAFE_PROJECT }}_PACKAGING_MAINTAINER_MODE:BOOL=ON -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=cmake/conan_provider.cmake
           # Build it because we may have broken something in the cpp/hpp files
           cmake --build build
 
@@ -231,7 +231,7 @@ jobs:
 
       - name: Test simple configuration to make sure nothing broke (default compiler,cmake,developer_mode OFF)
         run: |
-          cmake -S . -B ./build -G "${{ matrix.generator }}" -DCMAKE_BUILD_TYPE:STRING=${{ matrix.build_type }} -D${{ env.PROJECT_NAME }}_PACKAGING_MAINTAINER_MODE:BOOL=ON
+          cmake -S . -B ./build -G "${{ matrix.generator }}" -DCMAKE_BUILD_TYPE:STRING=${{ matrix.build_type }} -D${{ env.PROJECT_NAME }}_PACKAGING_MAINTAINER_MODE:BOOL=ON -DCMAKE_PROJECT_TOP_LEVEL_INCLUDES=cmake/conan_provider.cmake
 
       - uses: EndBug/add-and-commit@v9
         # only commit and push if we are a template and project name has changed
